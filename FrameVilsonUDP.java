@@ -124,6 +124,10 @@ public class FrameVilsonUDP extends javax.swing.JFrame {
                             System.out.println(msg);
                             msg = "";
                             jlDigitando.setVisible(true);
+                            
+                        } else if (msg.substring(0, 2).equals("2z")) {
+                            jlDigitando.setVisible(false);
+                            
                         } else {
                             System.out.print("\nMessage received...");
                             System.out.print("\n\tSource IP address: " + srcIPAddr);
@@ -414,6 +418,8 @@ public class FrameVilsonUDP extends javax.swing.JFrame {
     private void jtMensagemVilsonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtMensagemVilsonKeyPressed
         if (jtMensagemVilson.getText().length() > 0) {
             enviaMensagem("lz");
+        }else{
+            enviaMensagem("2z");
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER
                 && jtMensagemVilson.getText().length() > 0) {
