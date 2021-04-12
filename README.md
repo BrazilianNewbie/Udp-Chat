@@ -1,2 +1,2 @@
 # Udp-Chat
-UDP Chat made in Java
+UDP Chat in Java
